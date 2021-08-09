@@ -68,7 +68,12 @@ const App = () => {
   }
 
   if (isFetching) {
-    return <div>Loading...</div>
+    return <div className="Loader">
+              <div className="box-loader">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png" alt="loading"/>
+                <span className="loadingText">Loading...</span>
+              </div>  
+            </div>
   }
 
 
