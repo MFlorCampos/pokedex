@@ -1,11 +1,24 @@
 
 import { useState } from 'react';
 import APIService from '../../services/APIService'
+import Search from '../search/Search';
 import PokemonList from './PokemonList';
 
 let pokemonArray = [];
 
 const PokemonListContainer = () => {
+  const [text, setText] = useState("");
+
+  const onSubmit = evt => {
+      evt.preventDefault();
+      if (text === "") {
+        alert("Please enter something!");
+      } else {
+        alert(text);
+        setText("");
+      }
+  };
+  const onChange = evt => setText(evt.target.value);
 
   const [ isFetching, setIsFetching ] = useState(false);
   const [ pokemones, setPokemones ] = useState([]);
@@ -40,7 +53,9 @@ const PokemonListContainer = () => {
     return <div>Loading...</div>
   }
   
-  return pokemones.length > 0  && <PokemonList pokemones={pokemones} /> 
+  return (
+    pokemones.length > 0  && <PokemonList pokemones={pokemones} /> && <Search text={text} onChange={onChange} onSubmitt={onSubmit} /> 
+  )
 }
 
 export default PokemonListContainer;

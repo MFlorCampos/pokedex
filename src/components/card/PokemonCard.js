@@ -2,8 +2,10 @@ import React from 'react'
 
 const namespace = "ui-pokemon-list";
 
-const PokemonCard = ({name, id, url, image, types}) => {
-  
+const PokemonCard = (props) => {
+
+    const {name, id, image, types} = props;
+
     return (
         <div className={`${namespace}__pokemon col-sm-12 col-lg-3`} id="resultado">
             <div className={`${namespace}__pokemon-img`}>

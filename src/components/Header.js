@@ -1,6 +1,7 @@
 import React from 'react'
+import Search from './search/Search';
 
-function Header() {
+function Header(props) {
   return (
     <nav
       id="navbar"
@@ -12,7 +13,7 @@ function Header() {
             </a>
             </div>
             <button 
-                onClick='myFunction()'
+                //onClick='myFunction()'
                 className="navbar-toggler collapsed icon" 
                 type="button" 
                 data-toggle="collapse" 
@@ -32,22 +33,7 @@ function Header() {
                 className="navbar-collapse collapse" 
                 id="myLinks" 
             >
-                <div 
-                    className="buscador"
-                >
-                    <input 
-                        className="form-control mr-sm-2" 
-                        type="text" 
-                        placeholder="Buscar" 
-                        aria-label="Buscar" 
-                        id="formulario"
-                    />
-                    <button 
-                        type="search" 
-                        className="button button-search" 
-                        id="boton">
-                    </button>
-                </div>  
+                <Search {...props} />
             </div>
         </div>
     </nav>    
