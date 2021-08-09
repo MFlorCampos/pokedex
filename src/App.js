@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Styles from './Styles.scss';
+import './Styles.scss';
 import PokemonListContainer from './components/list/PokemonListContainer';
 
 
