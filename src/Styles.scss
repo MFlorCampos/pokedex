@@ -144,3 +144,12 @@
       }
     }
   }
+
+$mobile: 600px; 
+
+.ui-search__container{
+  display: flex;
+  @media screen and (max-width: $mobile){
+    width: 100%;
+  }
+}  

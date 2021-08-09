@@ -1,12 +1,14 @@
 import React from 'react'
 
+const namespace = "ui-search";
+
 function Search(props) {
     const {text, onSubmit, onChange} = props;
 
     return (
         <form 
             onSubmit= {onSubmit}
-            className="buscador"
+            className={`${namespace}__container`}
         >
             <input 
                 className="form-control mr-sm-2" 
